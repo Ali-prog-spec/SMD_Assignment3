@@ -94,7 +94,7 @@ class chat_paage : AppCompatActivity() {
         try {
             baseUrl = BaseUrlUtil.getBaseUrl(this)
         } catch (e: IOException) {
-            Toast.makeText(this, "Base URL Initialization Error.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Base URL  Eror.", Toast.LENGTH_LONG).show()
             finish()
             return
         }
@@ -406,10 +406,10 @@ class chat_paage : AppCompatActivity() {
                     chatAdapter.notifyDataSetChanged()
                     if (newMessages.isNotEmpty()) chatRecyclerView.scrollToPosition(messageList.size - 1)
                 } else {
-                    Log.e("CHAT_API", "Fetch messages error: ${jsonResponse.getString("message")}")
+                    Log.e("CHAT_API", "Fetch msg error: ${jsonResponse.getString("message")}")
                 }
             } catch (e: Exception) {
-                Log.e("CHAT_API", "Parsing error: ${e.message}")
+                Log.e("CHAT_API", "Parsing JSON error: ${e.message}")
                 loadOfflineMessages()
             }
         }, { error ->
