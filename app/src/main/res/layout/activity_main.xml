@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".UI.MainActivity"
+        android:padding="30dp">
+
+        <!-- App Logo in Center -->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/logo_layout"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/logo" />
+
+        <!-- Bottom Section -->
+        <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="20dp">
+
+                <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="from"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:gravity="center" />
+
+                <TextView
+                        android:id="@+id/smd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMD"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+</RelativeLayout>

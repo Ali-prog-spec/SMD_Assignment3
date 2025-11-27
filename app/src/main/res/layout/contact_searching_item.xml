@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <TextView
+                        android:id="@+id/avatarText"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="SS"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:background="@drawable/circle"
+                        android:layout_marginRight="10dp"
+                        />
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                                android:id="@+id/postUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/name"
+                                android:textStyle="bold"
+                                android:paddingStart="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:id="@+id/post_area"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/post_area"
+                                android:textStyle="normal"
+                                android:paddingStart="8dp"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+</LinearLayout>

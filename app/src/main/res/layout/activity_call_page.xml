@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_brown"
+    android:padding="16dp">
+
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/call_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Call status / time -->
+        <TextView
+            android:id="@+id/call_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/call_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+
+        <!-- Bottom buttons -->
+        <LinearLayout
+            android:id="@+id/bottom_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="24dp"
+            android:weightSum="3">
+
+                <!-- Message Button -->
+                <ImageView
+                    android:id="@+id/btn_message"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/message_icon"
+                    android:scaleType="centerInside"
+                    android:padding="12dp"
+                    app:tint="@color/black" />
+
+                <!-- End Call Button (Bigger) -->
+                <ImageView
+                    android:id="@+id/btn_end_call"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/call_icon"
+                    android:scaleType="centerInside"
+                    android:padding="16dp"
+                    app:tint="#FF0000" />
+
+                <!-- Speaker Button -->
+                <ImageView
+                    android:id="@+id/btn_speaker"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/sound_icon"
+                    android:scaleType="centerInside"
+                    android:padding="12dp"
+                    app:tint="@color/black" />
+        </LinearLayout>
+
+</RelativeLayout>

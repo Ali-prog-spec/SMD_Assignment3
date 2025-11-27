@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.initial_login_page"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="80dp"
+                >
+                <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/socialMedia_app"
+                        android:textSize="50sp"
+                        android:textColor="@color/dark_brown"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        />
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/dp3"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:layout_below="@+id/heading"
+                        />
+                <TextView
+                    android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/dp"
+                        />
+                <Button
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Login"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/dark_brown"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:layout_below="@+id/dp"/>
+
+                <Button
+                        android:id="@+id/switch_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Switch Account"
+                        android:textSize="20sp"
+                        android:textColor="@color/brown"
+
+                        android:background="@android:color/transparent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+
+                        android:layout_below="@+id/login_button"
+                        >
+
+                </Button>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                >
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                                android:id="@+id/account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Don't have an account? "
+                                android:textSize="15sp"
+                                android:textColor="@color/brown"/>
+
+                        <Button
+                                android:id="@+id/sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sign up"
+                                android:textSize="20sp"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/brown"
+                                />
+                </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

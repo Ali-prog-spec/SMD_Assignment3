@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+        <!-- Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/postProfileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/postUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/postProfileImage"
+            app:layout_constraintTop_toTopOf="@id/postProfileImage" />
+
+        <!-- Blue tick -->
+        <ImageView
+            android:id="@+id/blue_tick"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/share"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/postUsername"
+            app:layout_constraintBottom_toBottomOf="@id/postUsername" />
+
+        <!-- Post area (location/extra text) -->
+        <TextView
+            android:id="@+id/post_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_area"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/postProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/postUsername" />
+
+        <!-- Menu button -->
+        <ImageView
+            android:id="@+id/postMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/more_vert"
+            app:layout_constraintTop_toTopOf="@id/postProfileImage"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Post image -->
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/im2"
+            app:layout_constraintTop_toBottomOf="@id/postProfileImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Action buttons row -->
+        <ImageView
+            android:id="@+id/btnLike"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/like"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/postImage"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnComment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/search"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/btnLike"
+            app:layout_constraintBottom_toBottomOf="@id/btnLike" />
+
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/share"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/btnComment"
+            app:layout_constraintBottom_toBottomOf="@id/btnLike" />
+
+        <ImageView
+            android:id="@+id/post_scroll"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/more_vert"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/postImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnLike" />
+
+        <ImageView
+            android:id="@+id/btnSave"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnLike" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toBottomOf="@id/btnLike"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/commentBox"
+
+
+            >
+                <EditText
+                    android:id="@+id/editBox"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Write a comment..."
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:scrollbars="vertical"
+                    android:gravity="top|start"
+                    app:layout_constraintTop_toBottomOf="@id/btnLike"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btnSend"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/share"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/btnLike" />
+
+        </LinearLayout>
+
+        <!-- Likes -->
+        <TextView
+            android:id="@+id/postLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liked By"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/commentBox"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Caption -->
+        <TextView
+            android:id="@+id/postCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/post_description"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/postLikes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Comments -->
+        <TextView
+            android:id="@+id/postComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all comments"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="6dp"
+
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/postCaption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/commentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/postComments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

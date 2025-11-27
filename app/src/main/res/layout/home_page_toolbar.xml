@@ -1,0 +1,55 @@
+<!-- res/layout/custom_toolbar.xml -->
+<androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/top_navigation_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/dark_brown">
+
+        <!-- Camera icon on start -->
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/camera_icon"
+                android:layout_gravity="start|center_vertical"
+                app:tint="@color/dark_brown" />
+
+        <!-- App name in center -->
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/socialMedia_app"
+                android:textSize="25sp"
+                android:textColor="@color/dark_brown"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        <!-- Right icons -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end|center_vertical">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/picture"
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/dark_brown" />
+
+                <ImageView
+
+                        android:id="@+id/message"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share"
+                        app:tint="@color/dark_brown" />
+        </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:id="@+id/main"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <include
+                android:id="@+id/customNavBar"
+                layout="@layout/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp" />
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:fillViewport="true"
+        android:layout_above="@id/customNavBar"
+        >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Header with Following/You tabs -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:background="@color/white"
+                        android:elevation="1dp">
+
+                        <!-- Following Tab -->
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:background="?android:attr/selectableItemBackground">
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Following"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/dark_brown" />
+                                <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/dark_brown"
+                                        android:layout_marginTop="10dp"
+                                        />
+
+                        </LinearLayout>
+
+                        <!-- You Tab -->
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:background="?android:attr/selectableItemBackground">
+
+                                <TextView
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:id="@+id/you"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="You"
+                                        android:textStyle="bold"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/dark_brown" />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Activity Feed Items -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp">
+
+                        <!-- Activity Item 1: karenrme liked 3 posts -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp1" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="karenrme liked 3 posts. 3h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                        <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:layout_marginTop="8dp">
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im1" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im2" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im3" />
+
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 2: kiera_d, zackjohn and craig_love liked joshua_j photo -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp2" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="kiera_d, zackjohn and craig_love liked joshua_j photo. 4h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/im4" />
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 3: kiera_d started following craig_love -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginEnd="12dp"
+                                        >
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/dp2" />
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginStart="-10dp"
+                                                android:src="@drawable/imran_khan_dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="kiera_d started following craig_love. 6h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 4: craig_love liked 5 posts -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp4" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="craig_love liked 5 posts. 5h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                        <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:layout_marginTop="8dp">
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im5" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im6" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im7" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im8" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im9" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im10" />
+
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 5: maxjacobson and zackjohn liked milo_potter's post -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp5" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="maxjacobson and zackjohn liked milo_potter's post. 5h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/im1" />
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 6: maxjacobson and craig_love liked martini_rord's post -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp6" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="maxjacobson and craig_love liked martini_rord's post. 6h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/im2" />
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 7: karenrme liked martini_rord's comment -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp7" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="karenrme liked martini_rord's comment: @martini_rord 😍😍 7h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/im3" />
+
+                        </LinearLayout>
+
+                        <!-- Activity Item 8: maxjacobson liked 3 posts -->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:layout_marginEnd="12dp"
+                                        android:src="@drawable/dp8" />
+
+                                <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="maxjacobson liked 3 posts. 3h"
+                                                android:textSize="13sp"
+                                                android:textColor="#262626" />
+
+                                        <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:layout_marginTop="8dp">
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im4" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:layout_marginEnd="4dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im5" />
+
+                                                <ImageView
+                                                        android:layout_width="40dp"
+                                                        android:layout_height="40dp"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/im6" />
+
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>

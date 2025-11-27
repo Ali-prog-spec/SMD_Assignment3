@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:maxWidth="250dp"
+        android:layout_margin="4dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/message_card_left"/>
+
+
+    <ImageView
+        android:id="@+id/imageMessage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="4dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/sharedPostImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/sharedPostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:background="@drawable/message_card_left"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

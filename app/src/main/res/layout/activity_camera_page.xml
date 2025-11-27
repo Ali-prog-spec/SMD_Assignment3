@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#000000"
+        android:id="@+id/main"
+
+        >
+
+        <!-- Main Camera View -->
+        <ImageView
+                android:id="@+id/camera_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/camera_controls"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im4" />
+
+        <!-- Side Controls (Left) -->
+        <LinearLayout
+                android:id="@+id/icon_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/camera_view"
+                android:background="@color/transparent_black"
+                android:layout_marginTop="-100dp"
+                android:gravity="center"
+                >
+
+                <!-- Flash/Bolt Icon -->
+                <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/im12"
+                        app:shapeAppearanceOverlay="@style/RoundedRectImageView"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+
+                <!-- Gallery Icon -->
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/bolt_icon"
+                        android:padding="10dp"
+                        app:tint="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        />
+
+                <!-- Loop/Refresh Icon -->
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/record_icon"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                         />
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/loop_icon"
+                        android:padding="10dp"
+                        app:tint="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        />
+
+                <!-- Smiley/Effects Icon -->
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/smili_icon"
+                        android:padding="10dp"
+                        app:tint="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        />
+
+        </LinearLayout>
+
+        <!-- Camera Controls Bottom Section -->
+        <RelativeLayout
+                android:id="@+id/camera_controls"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black">
+
+
+                <!-- Camera Mode Selector -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="32dp">
+
+                        <!-- TYPE -->
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="TYPE"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_brown"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:letterSpacing="0.1" />
+
+                        <!-- LIVE -->
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="LIVE"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_brown"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:letterSpacing="0.1" />
+
+                        <!-- NORMAL (Active) -->
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="NORMAL"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_brown"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:letterSpacing="0.1" />
+
+                        <!-- BOOMERANG -->
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="FILTER"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_brown"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:letterSpacing="0.1" />
+
+                        <!-- SUPERZOOM -->
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SUPER"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_brown"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:letterSpacing="0.1" />
+
+                </LinearLayout>
+
+                <!-- Active Mode Indicator Line -->
+                <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <!-- Top Close Button -->
+        <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/right_icon"
+                android:background="@color/transparent_black_more"
+                android:padding="8dp"
+                app:tint="@color/white"
+
+                />
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingTop="8dp"
+        android:id="@+id/main"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/white"
+            android:elevation="1dp">
+                <ImageView
+                    android:id="@+id/back_btn_msg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon"
+                    android:contentDescription="Menu"
+                    app:tint="@color/dark_brown"
+                    />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="jacob_w"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#262626" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_toLeftOf="@+id/username"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/lock_icon"
+                    android:layout_marginRight="10dp"
+                    app:tint="@color/dark_brown"
+                    />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/menu_icon"
+                    android:contentDescription="Menu"
+                    app:tint="@color/dark_brown"
+                    />
+
+        </RelativeLayout>
+
+        <!-- Top row: search pill (left) + Clear text (right) -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp"
+                android:gravity="center_vertical">
+
+                <!-- Search pill (takes remaining width) -->
+                <LinearLayout
+                        android:id="@+id/searchPill"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/search_bg"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="6dp">
+
+                        <ImageView
+                                android:id="@+id/ivSearchIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/ic_menu_search"
+                                app:tint="@color/black"
+                                />
+
+                        <EditText
+                                android:id="@+id/searchEditText"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:hint="@string/search"
+                                android:background="@android:color/transparent"
+                                android:paddingStart="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingBottom="6dp"
+                                android:singleLine="true"
+                                android:imeOptions="actionSearch"
+                                android:textSize="18sp"/>
+
+                        <!-- small circular clear (x) inside the pill -->
+
+                </LinearLayout>
+
+                <!-- Separate "Clear" text on the right (like screenshot) -->
+                <TextView
+                        android:id="@+id/clearButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:textColor="#D32F2F"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Scrollable list of items (static includes) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <!-- Main Reel Image -->
+        <View
+                android:id="@+id/bottom_line"
+                android:layout_width="200dp"
+                android:layout_height="6dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/light_golden"
+                android:layout_alignParentBottom="true"
+                >
+
+        </View>
+        <!-- Overlay Progress Bars -->
+        <ImageView
+                android:id="@+id/reel_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dp5" />
+
+        <LinearLayout
+                android:id="@+id/top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="8"
+                >
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        >
+
+                <ImageView
+                        android:padding="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        app:tint="@color/light_golden"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        >
+
+                <ImageView
+                        android:padding="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tag"
+                        app:tint="@color/light_golden"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        >
+
+                <ImageView
+                        android:padding="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/font_size_icon"
+                        app:tint="@color/light_golden"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:padding="5dp"
+
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        >
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/stickers"
+                        app:tint="@color/light_golden"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                <ImageView
+                        android:padding="5dp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/music_icon"
+                        app:tint="@color/light_golden"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                <ImageView
+                        android:padding="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sparkling_icon"
+                        app:tint="@color/light_golden"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        >
+
+                <ImageView
+                        android:padding="10dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tripple_dot"
+                        app:tint="@color/light_golden"
+                        android:background="@drawable/transparent_black_circle"
+                        android:layout_marginBottom="5dp"
+                        />
+                </LinearLayout>
+
+                <!-- Profile Picture -->
+
+        </LinearLayout>
+
+        <!-- Song Info (below username/date) -->
+
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+                android:id="@+id/bottom_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="8dp"
+                android:gravity="center_vertical"
+                android:background="@color/black"
+                android:padding="20dp"
+                android:layout_above="@id/bottom_line"
+
+                >
+
+                <!-- Search pill (takes remaining width) -->
+                <LinearLayout
+                        android:id="@+id/message_area"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/less_black_rectangle"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="6dp"
+
+                        >
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dp3"
+                                app:shapeAppearanceOverlay="@style/CircleImageView" />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Your Story"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:layout_marginStart="10dp"
+                                >
+
+                        </TextView>
+                        <!-- small circular clear (x) inside the pill -->
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/close_friend"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/less_black_rectangle"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="6dp"
+
+                        >
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/im3"
+                                app:shapeAppearanceOverlay="@style/CircleImageView" />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="CLose Friend"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_marginStart="10dp"
+                                >
+
+                        </TextView>
+                        <!-- small circular clear (x) inside the pill -->
+                </LinearLayout>
+
+                <ImageView
+                        android:id="@+id/more"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/right_arrow_icon"
+                        android:padding="4dp"
+
+                        android:background="@drawable/golden_circle"
+                        android:layout_marginStart="10dp"
+                        app:tint="@color/black" />
+
+                <!-- Separate "Clear" text on the right (like screenshot) -->
+
+        </LinearLayout>
+
+</RelativeLayout>

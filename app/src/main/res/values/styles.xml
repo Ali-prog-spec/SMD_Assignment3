@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Your app theme might already be here -->
+
+        <!-- Custom Circle Image Style -->
+        <style name="CircleImageView">
+                <item name="cornerFamily">rounded</item>
+                <item name="cornerSize">50%</item>
+                <item name="strokeColor">@color/dark_brown</item>
+                <item name="strokeWidth">3dp</item>
+        </style>
+        <style name="RoundedRectImageView" parent="">
+                <item name="cornerFamily">rounded</item>
+                <item name="cornerSize">16dp</item> <!-- adjust roundness -->
+        </style>
+
+        <style name="ChipStyle">
+                <item name="android:layout_width">wrap_content</item>
+                <item name="android:layout_height">wrap_content</item>
+                <item name="android:padding">8dp</item>
+                <item name="android:layout_marginEnd">8dp</item>
+                <item name="android:background">@drawable/chip_bg</item>
+                <item name="android:textColor">@color/dark_brown</item>
+                <item name="android:textSize">14sp</item>
+        </style>
+</resources>

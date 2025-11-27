@@ -1,0 +1,11 @@
+<!-- res/drawable/rounded_black_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+
+        <!-- Background color with 60% black -->
+        <solid android:color="#66000000" />
+
+        <!-- Rounded corners -->
+        <corners android:radius="12dp" />
+
+</shape>

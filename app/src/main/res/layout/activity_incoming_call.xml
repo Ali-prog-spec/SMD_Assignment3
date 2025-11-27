@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_brown"
+    android:padding="24dp">
+
+    <!-- Caller Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgCaller"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/black" />
+
+    <!-- Caller Name -->
+    <TextView
+        android:id="@+id/tvCallerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgCaller"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Incoming Call"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Call Type / Status -->
+    <TextView
+        android:id="@+id/tvCallType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCallerName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Audio Call"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- Bottom Control Buttons -->
+    <LinearLayout
+        android:id="@+id/call_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:weightSum="2">
+
+        <!-- Reject Call Button -->
+        <ImageView
+            android:id="@+id/btnReject"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/call_icon"
+            android:scaleType="centerInside"
+            android:padding="16dp"
+            android:background="@drawable/round_button_bg"
+            app:tint="#FF0000" />
+
+        <!-- Accept Call Button -->
+        <ImageView
+            android:id="@+id/btnAccept"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/call_icon"
+            android:scaleType="centerInside"
+            android:padding="16dp"
+            android:background="@drawable/round_button_bg"
+            app:tint="#00C853" /> <!-- green color -->
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_brown"
+    android:padding="24dp">
+
+    <!-- Callee Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgCallee"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/black" />
+
+    <!-- Callee Name -->
+    <TextView
+        android:id="@+id/tvCalleeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgCallee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Calling..."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tvCallStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCalleeName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Ringing..."
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- Cancel Button -->
+    <ImageView
+        android:id="@+id/btnCancelCall"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/round_button_bg"
+        android:padding="20dp"
+        android:src="@drawable/call_icon"
+        app:tint="#FF0000" />
+
+</RelativeLayout>

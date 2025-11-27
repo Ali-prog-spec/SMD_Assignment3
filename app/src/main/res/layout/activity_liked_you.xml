@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:elevation="1dp">
+
+                <!-- Following Tab -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Following"
+                            android:textSize="16sp"
+                                android:textStyle="bold"
+                            android:textColor="@color/dark_brown"
+                            />
+
+                </LinearLayout>
+
+                <!-- You Tab -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/dark_brown" />
+
+                        <!-- Underline for active tab -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/dark_brown"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="bottom"
+                            />
+
+                </LinearLayout>
+
+        </LinearLayout>
+        <include
+            android:id="@+id/customNavBar"
+            layout="@layout/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp" />
+        <include
+    android:id="@+id/customNavBar"
+    layout="@layout/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp" />
+
+        <ScrollView
+            android:layout_below="@+id/topBar"
+            android:layout_above="@+id/customNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:id="@+id/main_scroll"
+            android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <!-- Header with Following/You tabs -->
+
+
+                        <!-- Follow Requests Section -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:background="?android:attr/selectableItemBackground">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Follow Requests"
+                                    android:textSize="16sp"
+                                        android:textColor="@color/dark_brown" />
+
+
+
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EFEFEF" />
+
+                        <!-- Activity Feed -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp">
+
+                                <!-- New Section -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="New"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#262626"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingBottom="8dp" />
+
+                                <!-- Activity Item 1: karenrme liked your photo -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp1" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="karenrme liked your photo. 1h"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/im1"
+                                            android:layout_marginEnd="10dp"
+                                            />
+
+                                </LinearLayout>
+
+                                <!-- Today Section -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Today"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#262626"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingTop="16dp"
+                                    android:paddingBottom="8dp" />
+
+                                <!-- Activity Item 2: kiera_d, zackjohn and 26 others liked your photo -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+                                        <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:layout_marginEnd="12dp"
+                                                >
+                                                <de.hdodenhof.circleimageview.CircleImageView
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:src="@drawable/dp2" />
+
+                                                <de.hdodenhof.circleimageview.CircleImageView
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:layout_marginTop="10dp"
+                                                        android:layout_marginStart="-10dp"
+                                                        android:src="@drawable/imran_khan_dp" />
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="kiera_d, zackjohn and 26 others liked your photo. 3h"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="centerCrop"
+                                            android:layout_marginEnd="10dp"
+                                            android:src="@drawable/im2" />
+
+                                </LinearLayout>
+
+                                <!-- This Week Section -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="This Week"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#262626"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingTop="16dp"
+                                    android:paddingBottom="8dp" />
+
+                                <!-- Activity Item 3: craig_love mentioned you in a comment -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp3" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="craig_love mentioned you in a comment: @jacobw exactly. 2d"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626"
+                                                    android:layout_marginBottom="8dp" />
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Reply"
+                                                            android:textSize="12sp"
+                                                            android:textColor="#8E8E8E"
+                                                            android:background="?android:attr/selectableItemBackground"
+                                                            android:padding="4dp" />
+
+                                                </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="centerCrop"
+                                            android:layout_marginEnd="10dp"
+                                            android:src="@drawable/im3" />
+
+                                </LinearLayout>
+
+                                <!-- Activity Item 4: martini_rord started following you -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp4" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="martini_rord started following you. 3d"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="70dp"
+                                            android:layout_height="30dp"
+                                            android:text="Message"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            android:textColor="#262626"
+                                            android:layout_marginEnd="10dp"
+                                            android:background="@drawable/button_card"
+
+                                            />
+
+                                </LinearLayout>
+
+                                <!-- Activity Item 5: maxjacobson started following you -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp5" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="maxjacobson started following you. 4d"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="70dp"
+                                            android:layout_height="30dp"
+                                            android:text="Message"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            android:textColor="#262626"
+                                            android:layout_marginEnd="10dp"
+                                            android:background="@drawable/button_card"
+
+                                            />
+
+                                </LinearLayout>
+
+                                <!-- Activity Item 6: milo_potter started following you -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp6" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="milo_potter started following you. 4d"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="70dp"
+                                            android:layout_height="30dp"
+                                            android:text="Follow"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold"
+                                            android:textColor="#262626"
+                                            android:background="@color/dark_brown"
+                                            android:layout_marginEnd="10dp"
+                                            android:gravity="center"
+
+                                            />
+
+                                </LinearLayout>
+
+                                <!-- This Month Section -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="This Month"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#262626"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingTop="16dp"
+                                    android:paddingBottom="8dp" />
+
+                                <!-- Activity Item 7: Partial view of another activity -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="12dp"
+                                    android:gravity="center_vertical">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginEnd="12dp"
+                                            android:src="@drawable/dp7" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="joshua_j liked your post. 2w"
+                                                    android:textSize="13sp"
+                                                    android:textColor="#262626" />
+
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/im4" />
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:id="@+id/main"
+        android:background="@android:color/black">
+
+        <!-- Main Reel Image -->
+        <ImageView
+                android:id="@+id/reel_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im9" />
+
+        <!-- Overlay Progress Bars -->
+        <LinearLayout
+                android:id="@+id/progress_bars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="4">
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="@android:color/white" />
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="#918e84" />
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="#918e84" />
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:background="#918e84" />
+        </LinearLayout>
+        <RelativeLayout
+                android:id="@+id/top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bars"
+                android:padding="8dp">
+
+                <!-- Profile Picture -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/reel_dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/dp7"
+                        android:scaleType="centerCrop"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@android:color/transparent" />
+
+                <!-- Username + Highlight + Date -->
+                <RelativeLayout
+                        android:id="@+id/user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/reel_dp"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                                android:id="@+id/reel_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Highlight"
+                                android:textStyle="bold"
+
+                                android:textSize="14sp"
+                                android:textColor="@android:color/black" />
+                        <TextView
+
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="December 3,2023"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="bold"
+                                android:layout_toEndOf="@id/reel_username"
+                                android:textSize="14sp"
+                                android:textColor="#918e84" />
+
+                        <TextView
+                                android:id="@+id/reel_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Artist Sond Title"
+                                android:layout_below="@+id/reel_username"
+                                android:textSize="12sp"
+                                android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <!-- Close Button (X) -->
+                <ImageView
+                        android:id="@+id/btn_close"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        app:tint="@android:color/white"/>
+        </RelativeLayout>
+
+        <!-- Song Info (below username/date) -->
+
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="7"
+                android:background="@color/black"
+                android:padding="6dp">
+
+                <!-- Home -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/activity"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Activity"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+                <!-- Search -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/reels"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Create"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <!-- Reels -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/grid_icon"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Create Post"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"
+                                android:layout_marginBottom="5dp"
+                                />
+                </LinearLayout>
+
+                <!-- Likes -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/brows_icon"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Likes"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+                <!-- Profile -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/share"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Send"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+                </LinearLayout>
+                <!--- More -->
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/tripple_dot"
+                                app:tint="@color/light_golden"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/white"/>
+                </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

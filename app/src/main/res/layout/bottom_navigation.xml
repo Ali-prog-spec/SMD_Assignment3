@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/customBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        
+        >
+
+        <!-- Home -->
+        <LinearLayout
+                android:id="@+id/icon_group"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="8dp"
+
+
+                >
+                
+        
+        <ImageView
+                android:id="@+id/nav_home"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/home"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:tint="@color/dark_brown" />
+
+        <!-- Search -->
+        <ImageView
+                android:id="@+id/nav_search"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/search"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:tint="@color/dark_brown" />
+
+        <!-- create -->
+        <ImageView
+                android:id="@+id/nav_create"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:src="@drawable/create"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:tint="@color/dark_brown" />
+
+        <!-- Shop -->
+        <ImageView
+                android:id="@+id/nav_like"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/like"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:tint="@color/dark_brown" />
+
+        <!-- Profile (circular) -->
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/nav_profile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+        <View
+                android:layout_width="150dp"
+                android:layout_height="6dp"
+                android:background="@color/dark_brown"
+                android:layout_below="@+id/icon_group"
+                android:layout_centerHorizontal="true"
+                >
+
+        </View>
+</RelativeLayout>

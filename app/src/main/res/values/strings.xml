@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">assignment2_Socially</string>
+    <string name="socialMedia_app">Socially</string>
+    <string name="signup_button">Create An Account and Sign Up</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phone_no">Phone</string>
+    <string name="gender">Gender</string>
+    <string name="password">Password</string>
+    <string name="search">Search</string>
+
+    <string name="Date_of_Birth">Date of Birth</string>
+    <string name="your_name">Your Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="gender_option">Male / Female</string>
+
+    <string name="enter_your_phone">Enter Your Phone No.</string>
+
+    <string name="enter_your_last_name">Enter Your Last Name</string>
+    <string name="enter_your_username">Enter Your Username</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+
+    <string name="dob">DD/MM/YYYY</string>
+    <string name="name">Shah_Salman</string>
+    <string name="name2">Ali_Haider</string>
+    <string name="name3">Hammas_Zaheer</string>
+    <string name="name4">Saif_Ali</string>
+    <string name="name5">Ali_Zaffar</string>
+    <string name="name1">Imran_Khan</string>
+
+    <string name="now_time">.now</string>
+    <string name="time_15m">.15m</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="website">Website</string>
+
+    <string name="change_profile_pic">Change Profile Photo</string>
+
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="time_1m">.1m</string>
+    <string name="time_2h">.2h</string>
+    <string name="time_20m">.20m</string>
+
+    <string name="post_area">Islamabad, Pakistan</string>
+
+    <string name="post_description">The game in the Japan was amazing and I want to share some Photos</string>
+
+    <string name="liked_by">Liked by xyz and 44,686 others</string>
+
+
+    <string name="create_account">Create An Account</string>
+
+
+</resources>

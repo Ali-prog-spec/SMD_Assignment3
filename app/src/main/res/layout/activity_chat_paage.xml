@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingTop="8dp">
+
+        <!-- 🔹 Top row: header/search area -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical">
+
+                <!-- Search pill (left) -->
+                <LinearLayout
+                    android:id="@+id/searchPill"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/search_bg"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:id="@+id/back_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/back_icon"
+                            app:tint="@color/dark_brown"
+                            android:layout_marginRight="10dp" />
+
+                        <TextView
+                            android:id="@+id/avatarText"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:background="@drawable/circle"
+                            android:layout_marginRight="10dp" />
+
+                        <TextView
+                            android:id="@+id/searchEditText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="8dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/video_call"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/video_call"
+                            android:padding="4dp"
+                            android:layout_marginStart="6dp"
+                            app:tint="@color/black" />
+                        <ImageView
+                            android:id="@+id/audio_call"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/audio_call"
+                            android:padding="4dp"
+                            android:layout_marginStart="6dp"
+                            app:tint="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/information"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/information_icon"
+                    android:padding="4dp"
+                    android:layout_marginStart="6dp"
+                    app:tint="@color/dark_brown" />
+        </LinearLayout>
+
+        <!-- 🔹 RecyclerView for chat messages -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_bar"
+            android:layout_above="@id/bottom_area"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <!-- 🔹 Bottom input area -->
+        <LinearLayout
+            android:id="@+id/bottom_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/message_area"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/search_bg"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:id="@+id/icon1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/back_icon"
+                            app:tint="@color/dark_brown"
+                            android:layout_marginRight="10dp" />
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/clear_circle"
+                                    android:scaleType="centerCrop" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/camera_icon"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/white" />
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/s1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="Message ..."
+                            android:textColor="@color/black"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="8dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionSend"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/v1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/share"
+                            android:padding="4dp"
+                            android:layout_marginStart="6dp"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/i1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/picture"
+                            android:padding="4dp"
+                            android:layout_marginStart="6dp"
+                            app:tint="@color/black" />
+
+                        <ToggleButton
+                            android:id="@+id/toggle_button"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn=""
+                            android:padding="4dp" />
+                </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>
