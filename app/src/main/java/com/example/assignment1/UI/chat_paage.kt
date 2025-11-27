@@ -406,7 +406,7 @@ class chat_paage : AppCompatActivity() {
                     chatAdapter.notifyDataSetChanged()
                     if (newMessages.isNotEmpty()) chatRecyclerView.scrollToPosition(messageList.size - 1)
                 } else {
-                    Log.e("CHAT_API", "Fetch messages error: ${jsonResponse.getString("message")}")
+                    Log.e("CHAT_API", "Fetch msg error: ${jsonResponse.getString("message")}")
                 }
             } catch (e: Exception) {
                 Log.e("CHAT_API", "Parsing error: ${e.message}")
