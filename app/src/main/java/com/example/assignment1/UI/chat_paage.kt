@@ -94,7 +94,7 @@ class chat_paage : AppCompatActivity() {
         try {
             baseUrl = BaseUrlUtil.getBaseUrl(this)
         } catch (e: IOException) {
-            Toast.makeText(this, "Base URL Initialization Error.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Base URL  Error.", Toast.LENGTH_LONG).show()
             finish()
             return
         }
