@@ -409,7 +409,7 @@ class chat_paage : AppCompatActivity() {
                     Log.e("CHAT_API", "Fetch msg error: ${jsonResponse.getString("message")}")
                 }
             } catch (e: Exception) {
-                Log.e("CHAT_API", "Parsing error: ${e.message}")
+                Log.e("CHAT_API", "Parsing JSON error: ${e.message}")
                 loadOfflineMessages()
             }
         }, { error ->
