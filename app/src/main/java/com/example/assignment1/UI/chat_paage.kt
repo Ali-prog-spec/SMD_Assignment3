@@ -105,7 +105,7 @@ class chat_paage : AppCompatActivity() {
         receiverDpUrl = intent.getStringExtra("receiverDp")
 
         if (currentUserId == "0" || receiverId == null) {
-            Toast.makeText(this, "Error: Invalid chat user or not logged in.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error: Invalid chattt user or not logged in.", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
@@ -115,7 +115,7 @@ class chat_paage : AppCompatActivity() {
         videCall = findViewById(R.id.video_call)
         voiceCall = findViewById(R.id.audio_call)
         videCall.setOnClickListener {
-            Toast.makeText(this, "clicked video call", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "clicked vid  call", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, outgoing_call::class.java)
             intent.putExtra("callType", "video")
